@@ -12,6 +12,7 @@ b,strong,h1,h2,h3,button,.game-info small,.date-tile span,.player-name span { fo
 .undo-button { height:47px; border:1px solid var(--line); border-radius:14px; background:white; color:var(--teal); padding:0 14px; font-weight:900; }
 .undo-button:disabled { opacity:.4; }
 .end-game-button { width:100%; margin-top:18px; border:1px solid #d4b06a; border-radius:14px; background:#fff7df; color:#8d1b1f; padding:14px; font-weight:600!important; }
+.delete-game-button { width:100%; margin-top:18px; border:1px solid #dcb5b7; border-radius:14px; background:#fff3f0; color:#8d1b1f; padding:14px; font-weight:600!important; }
 .turnover-button { min-height:74px; border:0; border-radius:15px; background:#e5f1ef; color:var(--teal); font-size:18px; font-weight:900; }
 .turnover-button b { font-size:12px; }
 .game-log { margin-top:22px; background:white; border:1px solid var(--line); border-radius:18px; padding:15px; }
@@ -71,7 +72,8 @@ html,body { background:#eee8dc!important; }
 .scorebar span { color:#eee0c4!important; max-width:84px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 @media(max-width:470px){.controls-row{grid-template-columns:1fr}.goalie-stats-table>div{grid-template-columns:minmax(105px,1fr) 28px 28px 46px auto;padding:10px 8px}.stat-edit-grid{grid-template-columns:1fr}.scorebar{padding-left:16px;padding-right:16px}}
 
-.delete-past { position:absolute; right:5px; top:3px; width:28px; height:28px; border:0; background:transparent; color:#8d1b1f; font-size:19px; }
+.past-actions { display:grid; gap:6px; min-width:72px; }
+.delete-past { border:1px solid #dcb5b7; border-radius:9px; background:#fff3f0; color:#8d1b1f; padding:7px 9px; font-size:11px; font-weight:500; }
 .period-filter-label { margin-top:14px; }
 .report-periods { grid-template-columns:repeat(5,1fr); margin-top:6px; }
 .report-periods button { padding:9px 4px; }
