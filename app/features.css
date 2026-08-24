@@ -50,3 +50,24 @@ b,strong,h1,h2,h3,button,.game-info small,.date-tile span,.player-name span { fo
 .stats-heading { margin-top:24px; }.player-stats { background:white; border:1px solid var(--line); border-radius:15px; overflow:hidden; }.player-stats>div { display:grid; grid-template-columns:1fr 34px 34px 34px; gap:6px; align-items:center; padding:11px 13px; border-bottom:1px solid #e6eeec; font-size:11px; }.player-stats>div:last-child { border-bottom:0; }.player-stats-head { color:#71827f; font-size:9px!important; font-weight:900; }.player-stats b { text-align:center; }
 .stat-rows b,.player-stats b,.player-stats-head,.big-score b { font-weight:500!important; }.modal>.eyebrow,.modal .stats-heading { margin:22px 0 8px; }.stat-rows,.player-stats { border-color:#eadfca; }.stat-rows div,.player-stats>div { min-height:44px; }
 @media(max-width:470px){.filter-grid{grid-template-columns:1fr}.roster-list .goalie-row{grid-template-columns:42px 1fr 42px}.goalie-row .goalie-metrics{grid-column:1/-1;justify-content:space-around;border-top:1px solid var(--line);padding-top:10px}.period-actions{grid-template-columns:1fr}.undo-button{width:100%}}
+
+/* Bulldogs palette and game-stat refinements */
+html,body { background:#eee8dc!important; }
+.app { background:#fffdfa!important; }
+.segment.five { grid-template-columns:repeat(5,1fr); }
+.period-actions-top { margin:0 0 12px; }
+.period-actions-top .period-button { margin-top:0; }
+.turnover-button { min-height:74px; border:1px solid #e0bd72; border-radius:15px; background:#fff0cc!important; color:#8d1b1f!important; font-size:18px; }
+.turnover-button:disabled,.rink.view-only { opacity:.55; cursor:not-allowed; }
+.goalie-stats-table { background:white; border:1px solid var(--line); border-radius:15px; overflow:hidden; }
+.goalie-stats-table>div { display:grid; grid-template-columns:minmax(125px,1fr) 34px 34px 52px auto; gap:6px; align-items:center; min-height:44px; padding:11px 13px; border-bottom:1px solid var(--line); font-size:11px; }
+.goalie-stats-table>div:last-child { border-bottom:0; }
+.goalie-stats-head { color:#756b5d; font-size:9px!important; }
+.goalie-stats-table b { text-align:center; font-weight:500; }
+.inline-edit { border:0; border-radius:8px; background:var(--ice); color:var(--teal); padding:7px 8px; font-size:10px; font-weight:500; }
+.player-stats>div:not(.player-stats-head):has(.inline-edit) { grid-template-columns:1fr 28px 28px 28px auto; }
+.stats-note { color:#766b5d; font-size:11px; line-height:1.5; }
+.stat-edit-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.scorebar span { color:#eee0c4!important; max-width:84px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+@media(max-width:470px){.controls-row{grid-template-columns:1fr}.goalie-stats-table>div{grid-template-columns:minmax(105px,1fr) 28px 28px 46px auto;padding:10px 8px}.stat-edit-grid{grid-template-columns:1fr}.scorebar{padding-left:16px;padding-right:16px}}
+
