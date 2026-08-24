@@ -1,0 +1,12 @@
+.rink {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border: 0;
+  border-radius: 14px;
+  background: #fff url('/half-rink.png') center / contain no-repeat;
+}
+
+.rink.attacking {
+  background: #fff url('/half-rink.png') center / contain no-repeat;
+}

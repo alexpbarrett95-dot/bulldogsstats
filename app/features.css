@@ -1,0 +1,52 @@
+.four-tabs { grid-template-columns: repeat(4, 1fr); }
+:root { --ink:#171717; --ice:#fff7df; --mint:#f9b719; --teal:#b31b20; --red:#e3262e; --line:#eadfca; }
+body { letter-spacing:.005em; }.app { background:#fffdfa; padding-left:20px; padding-right:20px; }.club-logo { width:52px; height:52px; border-radius:50%; object-fit:cover; border:2px solid #f9b719; }.eyebrow { color:#b31b20; font-weight:700; }.tabs { margin-left:-20px; margin-right:-20px; padding-left:20px; padding-right:20px; }.tabs button,.primary,.period-button,.add,.number,.open-game,.stats-link,.edit-player,.turnover-button,.undo-button { font-weight:700; }.content { padding-top:28px; }.cards,.roster-list { gap:14px; }.game-card { padding:17px; }.section-head { margin-bottom:4px; }
+b,strong,h1,h2,h3,button,.game-info small,.date-tile span,.player-name span { font-weight:700!important; }
+.live-header,.scorebar { background:#171717; }.segment,.end-toggle { background:#f7edd5; }.turnover-button { background:#fff0cc; color:#8d1b1f; }.goal-button { background:#fee7dd; }.rink-card,.game-log,.modal,.stat-rows,.player-stats { border-color:#eadfca; }.modal { background:#fffdfa; }.period-button { background:#f9b719; color:#171717; }.period-button.running { background:#171717; color:white; }.stats-link { color:#f9b719; }
+.segment button:disabled { opacity: .65; }
+.rink { background:none; }
+.rink::before { content:""; position:absolute; inset:0; background:#fff url('/half-rink.png') center/contain no-repeat; transition:transform .2s ease; }
+.rink.attacking::before { transform:rotate(180deg); }
+.rink .shot { z-index:3; }
+.period-actions { display:grid; grid-template-columns:1fr auto; gap:10px; align-items:end; }
+.undo-button { height:47px; border:1px solid var(--line); border-radius:14px; background:white; color:var(--teal); padding:0 14px; font-weight:900; }
+.undo-button:disabled { opacity:.4; }
+.end-game-button { width:100%; margin-top:18px; border:1px solid #d4b06a; border-radius:14px; background:#fff7df; color:#8d1b1f; padding:14px; font-weight:600!important; }
+.turnover-button { min-height:74px; border:0; border-radius:15px; background:#e5f1ef; color:var(--teal); font-size:18px; font-weight:900; }
+.turnover-button b { font-size:12px; }
+.game-log { margin-top:22px; background:white; border:1px solid var(--line); border-radius:18px; padding:15px; }
+.log-title { display:flex; justify-content:space-between; align-items:center; }
+.log-title h2 { margin:0; font-size:19px; }
+.log-title>span { font-size:11px; color:#71827f; }
+.game-log>button { display:flex; width:100%; justify-content:space-between; align-items:center; border:0; border-top:1px solid #e6eeec; background:transparent; padding:13px 2px; text-align:left; color:var(--ink); }
+.game-log>button span { display:grid; gap:4px; }
+.game-log>button small { color:#738582; }
+.game-log>button i { color:var(--teal); font-size:11px; font-weight:900; font-style:normal; }
+.empty-log { color:#738582; font-size:12px; margin:16px 0 2px; }
+.check-row { display:flex; grid-template-columns:auto 1fr; align-items:center; gap:9px; }
+.check-row input,.game-picker input { width:18px; height:18px; accent-color:var(--teal); }
+.roster-list article { grid-template-columns:45px 1fr auto 46px; column-gap:11px; padding:14px 18px 14px 12px; }
+.roster-list .goalie-row { grid-template-columns:45px 1fr 2fr 46px; }
+.skater-metrics,.goalie-metrics { display:flex; justify-content:flex-end; gap:13px; }
+.skater-metrics span,.goalie-metrics span { display:grid; gap:3px; min-width:25px; font-weight:900; }
+.skater-metrics small,.goalie-metrics small { color:#82918f; font-size:8px; }
+.edit-player { border:0; background:var(--ice); color:var(--teal); font-size:10px; font-weight:600; border-radius:8px; padding:8px 10px; margin-right:5px; }
+.roster-list .remove { right:6px; top:5px; }
+.roster-group { margin-top:23px; }.roster-group>h3 { display:flex; align-items:center; gap:8px; margin:0 0 9px; font-size:15px; }.roster-group>h3 span { display:grid; place-items:center; min-width:22px; height:22px; border-radius:8px; background:#e5efed; color:var(--teal); font-size:10px; }
+.game-picker { margin-top:20px; background:white; border:1px solid var(--line); border-radius:14px; }
+.game-picker summary { cursor:pointer; padding:14px; font-weight:900; }
+.game-picker>div { max-height:260px; overflow:auto; border-top:1px solid var(--line); padding:6px 14px; }
+.game-picker label { display:flex; grid-template-columns:auto 1fr; align-items:center; gap:10px; padding:9px 0; }
+.report-card { margin-top:14px; background:white; border:1px solid var(--line); border-radius:18px; padding:12px; }
+.report-rink { position:relative; width:100%; aspect-ratio:1/1; border-radius:12px; background:#fff url('/half-rink.png') center/contain no-repeat; overflow:hidden; }
+.report-shot { position:absolute; transform:translate(-50%,-50%); width:13px; height:13px; border-radius:50%; background:#f9b719; border:2px solid white; box-shadow:0 1px 4px #0006; }
+.report-shot.against { background:#171717; }
+.report-shot.goal { width:18px; height:18px; background:var(--red); }
+.report-legend { display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top:12px; font-size:10px; font-weight:800; }
+.report-legend i { display:inline-block; width:10px; height:10px; border-radius:50%; background:#f9b719; margin-right:5px; }
+.report-legend i.against { background:#171717; }.report-legend i.goal { background:var(--red); }
+.report-filters { margin-top:20px; background:white; border:1px solid var(--line); border-radius:18px; padding:15px; }.filter-title { display:flex; justify-content:space-between; align-items:center; margin-bottom:13px; }.filter-title button { border:0; background:transparent; color:var(--teal); font-weight:700; }.filter-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }.filter-grid select { padding:10px 8px; }.report-filters .game-picker { margin-top:12px; }.report-count { margin:14px 2px; color:#766b5d; font-size:11px; }.report-section { margin-top:14px; background:white; border:1px solid var(--line); border-radius:18px; padding:15px; }.report-section h3 { margin:0 0 12px; }.attacking-report { transform:rotate(180deg); }.attacking-report .report-shot { transform:translate(50%,50%) rotate(180deg); }
+.filter-grid label,.filter-grid select,.game-picker summary,.game-picker label { font-weight:400!important; }.report-head { display:flex; justify-content:space-between; align-items:flex-start; }.report-counters { display:flex; gap:8px; }.report-counters span { min-width:54px; display:grid; place-items:center; gap:2px; padding:8px; border-radius:10px; background:#fff7df; color:#171717; font-size:18px; font-weight:500; }.report-counters small { color:#8d6b29; font-size:8px; font-weight:500; }
+.stats-heading { margin-top:24px; }.player-stats { background:white; border:1px solid var(--line); border-radius:15px; overflow:hidden; }.player-stats>div { display:grid; grid-template-columns:1fr 34px 34px 34px; gap:6px; align-items:center; padding:11px 13px; border-bottom:1px solid #e6eeec; font-size:11px; }.player-stats>div:last-child { border-bottom:0; }.player-stats-head { color:#71827f; font-size:9px!important; font-weight:900; }.player-stats b { text-align:center; }
+.stat-rows b,.player-stats b,.player-stats-head,.big-score b { font-weight:500!important; }.modal>.eyebrow,.modal .stats-heading { margin:22px 0 8px; }.stat-rows,.player-stats { border-color:#eadfca; }.stat-rows div,.player-stats>div { min-height:44px; }
+@media(max-width:470px){.filter-grid{grid-template-columns:1fr}.roster-list .goalie-row{grid-template-columns:42px 1fr 42px}.goalie-row .goalie-metrics{grid-column:1/-1;justify-content:space-around;border-top:1px solid var(--line);padding-top:10px}.period-actions{grid-template-columns:1fr}.undo-button{width:100%}}
