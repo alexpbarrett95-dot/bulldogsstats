@@ -6,7 +6,7 @@ b,strong,h1,h2,h3,button,.game-info small,.date-tile span,.player-name span { fo
 .segment button:disabled { opacity: .65; }
 .rink { background:none; }
 .rink::before { content:""; position:absolute; inset:0; background:#fff url('/half-rink.png') center/contain no-repeat; transition:transform .2s ease; }
-.rink.attacking::before { transform:rotate(180deg); }
+.rink.attacking::before,.rink.for::before { transform:rotate(180deg); }
 .rink .shot { z-index:3; }
 .period-actions { display:grid; grid-template-columns:1fr auto; gap:10px; align-items:end; }
 .undo-button { height:47px; border:1px solid var(--line); border-radius:14px; background:white; color:var(--teal); padding:0 14px; font-weight:900; }
@@ -29,11 +29,27 @@ b,strong,h1,h2,h3,button,.game-info small,.date-tile span,.player-name span { fo
 .roster-list article { grid-template-columns:45px 1fr auto 46px; column-gap:11px; padding:14px 18px 14px 12px; }
 .roster-list .goalie-row { grid-template-columns:45px 1fr 2fr 46px; }
 .skater-metrics,.goalie-metrics { display:flex; justify-content:flex-end; gap:13px; }
-.skater-metrics span,.goalie-metrics span { display:grid; gap:3px; min-width:25px; font-weight:900; }
+.skater-metrics span,.goalie-metrics span { display:grid; gap:3px; min-width:25px; font-weight:600; color:#171717; }
 .skater-metrics small,.goalie-metrics small { color:#82918f; font-size:8px; }
 .edit-player { border:0; background:var(--ice); color:var(--teal); font-size:10px; font-weight:600; border-radius:8px; padding:8px 10px; margin-right:5px; }
 .roster-list .remove { right:6px; top:5px; }
-.roster-group { margin-top:23px; }.roster-group>h3 { display:flex; align-items:center; gap:8px; margin:0 0 9px; font-size:15px; }.roster-group>h3 span { display:grid; place-items:center; min-width:22px; height:22px; border-radius:8px; background:#e5efed; color:var(--teal); font-size:10px; }
+.roster-group { margin-top:23px; }.roster-group>h3 { display:flex; align-items:center; gap:8px; margin:0 0 9px; font-size:15px; }.roster-group>h3 span { display:grid; place-items:center; min-width:22px; height:22px; border-radius:8px; background:#f9b719; color:#171717; font-size:10px; }.roster-list .number { background:#171717; }
+
+.game-tabs { display:grid; grid-template-columns:1fr 1fr; gap:6px; margin:14px 0 2px; padding:4px; border-radius:13px; background:#f7edd5; }
+.game-tabs button { border:0; border-radius:10px; background:transparent; color:#746b59; padding:10px; font-weight:600; }
+.game-tabs button.active { background:#fff; color:#171717; box-shadow:0 2px 8px #17171718; }
+.game-tabs span { display:inline-grid; place-items:center; min-width:20px; height:20px; margin-left:4px; border-radius:7px; background:#f9b719; color:#171717; font-size:10px; }
+.game-roster { margin-top:18px; }
+.lineup-heading { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
+.lineup-heading h2 { margin:0; font-size:23px; }
+.lineup-heading>div:last-child { display:flex; gap:6px; }
+.lineup-heading button { border:1px solid #eadfca; border-radius:9px; background:#fff; color:#8d1b1f; padding:8px 9px; font-size:10px; font-weight:600; }
+.lineup-note { margin:8px 0 20px; color:#756e62; font-size:12px; }
+.lineup-group { margin:18px 0; }
+.lineup-group h3 { margin:0 0 8px; font-size:14px; }
+.lineup-player { grid-template-columns:22px 40px 1fr; align-items:center; gap:9px; margin-bottom:7px; border:1px solid #eadfca; border-radius:13px; background:#fff; padding:10px 12px; color:#171717; font-size:13px; font-weight:500; }
+.lineup-player input { width:18px; height:18px; accent-color:#f9b719; }
+.lineup-number { display:grid; place-items:center; height:34px; border-radius:9px; background:#171717; color:#fff; font-weight:600; }
 .game-picker { margin-top:20px; background:white; border:1px solid var(--line); border-radius:14px; }
 .game-picker summary { cursor:pointer; padding:14px; font-weight:900; }
 .game-picker>div { max-height:260px; overflow:auto; border-top:1px solid var(--line); padding:6px 14px; }
