@@ -8,6 +8,7 @@ b,strong,h1,h2,h3,button,.game-info small,.date-tile span,.player-name span { fo
 .rink::before { content:""; position:absolute; inset:0; background:#fff url('/half-rink.png') center/contain no-repeat; transition:transform .2s ease; }
 .rink.attacking::before,.rink.for::before { transform:rotate(180deg); }
 .rink .shot { z-index:3; }
+.turnover-marker { position:absolute; z-index:4; display:grid; place-items:center; width:25px; height:25px; transform:translate(-50%,-50%); border:2px solid #fff; border-radius:6px; background:#f9b719; color:#171717; box-shadow:0 2px 6px #0005; font-size:10px; font-style:normal; font-weight:700; }
 .period-actions { display:grid; grid-template-columns:1fr auto; gap:10px; align-items:end; }
 .undo-button { height:47px; border:1px solid var(--line); border-radius:14px; background:white; color:var(--teal); padding:0 14px; font-weight:900; }
 .undo-button:disabled { opacity:.4; }
@@ -90,6 +91,9 @@ html,body { background:#eee8dc!important; }
 
 .past-actions { display:grid; gap:6px; min-width:72px; }
 .delete-past { border:1px solid #dcb5b7; border-radius:9px; background:#fff3f0; color:#8d1b1f; padding:7px 9px; font-size:11px; font-weight:500; }
+.goal-note-popup { margin-top:18px; border:1px solid #eadfca; border-radius:15px; background:#fff; padding:18px; }
+.goal-note-popup p { margin:0 0 8px; color:#171717; font-size:18px; font-weight:600; }
+.goal-note-popup small { color:#756e62; }
 .period-filter-label { margin-top:14px; }
 .report-periods { grid-template-columns:repeat(5,1fr); margin-top:6px; }
 .report-periods button { padding:9px 4px; }
