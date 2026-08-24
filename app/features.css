@@ -76,6 +76,9 @@ html,body { background:#eee8dc!important; }
 .period-actions-top { margin:0 0 12px; }
 .period-actions-top .period-button { margin-top:0; }
 .turnover-button { min-height:74px; border:1px solid #e0bd72; border-radius:15px; background:#fff0cc!important; color:#8d1b1f!important; font-size:18px; }
+.event-grid .goal-button,.event-grid .turnover-button { min-height:78px; border:1px solid #e0bd72; border-radius:15px; background:#fff0cc!important; color:#8d1b1f!important; padding:12px 10px; font-size:11px; font-weight:700; line-height:1.35; }
+.event-grid .goal-button b,.event-grid .turnover-button b { font-size:12px; font-weight:700; }
+.event-grid .goal-button:disabled,.event-grid .turnover-button:disabled { opacity:.45; }
 .turnover-button:disabled,.rink.view-only { opacity:.55; cursor:not-allowed; }
 .goalie-stats-table { background:white; border:1px solid var(--line); border-radius:15px; overflow:hidden; }
 .goalie-stats-table>div { display:grid; grid-template-columns:minmax(125px,1fr) 34px 34px 52px auto; gap:6px; align-items:center; min-height:44px; padding:11px 13px; border-bottom:1px solid var(--line); font-size:11px; }
