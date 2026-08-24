@@ -1,4 +1,5 @@
 {
+  // Cloudflare deploys the current GitHub main branch with this Worker configuration.
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "bulldogsstats",
   "account_id": "0fc5a271f42c4d7c2b4354f5a8e2e0da",
