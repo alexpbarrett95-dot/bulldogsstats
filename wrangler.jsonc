@@ -1,6 +1,7 @@
 {
   // Cloudflare deploys the current GitHub main branch with this Worker configuration.
   // Static interface assets are bundled with each deployment.
+  // Game-summary reporting uses the current production bundle.
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "bulldogsstats",
   "account_id": "0fc5a271f42c4d7c2b4354f5a8e2e0da",
