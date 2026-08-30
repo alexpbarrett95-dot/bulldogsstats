@@ -1,4 +1,5 @@
 .four-tabs { grid-template-columns: repeat(4, 1fr); }
+.five-tabs { grid-template-columns:repeat(5,1fr); }
 :root { --ink:#171717; --ice:#fff7df; --mint:#f9b719; --teal:#b31b20; --red:#e3262e; --line:#eadfca; }
 body { letter-spacing:.005em; }.app { background:#fffdfa; padding-left:20px; padding-right:20px; }.club-logo { width:52px; height:52px; border-radius:50%; object-fit:cover; border:2px solid #f9b719; }.eyebrow { color:#b31b20; font-weight:700; }.tabs { margin-left:-20px; margin-right:-20px; padding-left:20px; padding-right:20px; }.tabs button,.primary,.period-button,.add,.number,.open-game,.stats-link,.edit-player,.turnover-button,.undo-button { font-weight:700; }.content { padding-top:28px; }.cards,.roster-list { gap:14px; }.game-card { padding:17px; }.section-head { margin-bottom:4px; }
 b,strong,h1,h2,h3,button,.game-info small,.date-tile span,.player-name span { font-weight:700!important; }
@@ -98,6 +99,30 @@ html,body { background:#eee8dc!important; }
 .goal-note-popup { margin-top:18px; border:1px solid #eadfca; border-radius:15px; background:#fff; padding:18px; }
 .goal-note-popup p { margin:0 0 8px; color:#171717; font-size:18px; font-weight:600; }
 .goal-note-popup small { color:#756e62; }
+.goal-note-popup .net-map { margin-top:16px; }
+
+.net-heading { margin:2px 0 8px; }
+.net-help { margin:7px 0 0; color:#756e62; font-size:11px; text-align:center; }
+.net-map { position:relative; display:block; width:100%; aspect-ratio:2/1; overflow:hidden; border:5px solid #c93237; border-bottom-width:8px; border-radius:10px 10px 3px 3px; background:linear-gradient(#f8fcff,#e9f3f8); padding:0; }
+.net-map.selectable { cursor:crosshair; }
+.net-map.static:disabled { opacity:1; color:inherit; }
+.net-mesh { position:absolute; inset:0; background-image:linear-gradient(30deg,transparent 47%,#9eb6c244 48%,#9eb6c244 52%,transparent 53%),linear-gradient(-30deg,transparent 47%,#9eb6c244 48%,#9eb6c244 52%,transparent 53%); background-size:34px 24px; }
+.net-marker { position:absolute; z-index:2; width:13px; height:13px; transform:translate(-50%,-50%); border:2px solid #fff; border-radius:50%; background:#171717; box-shadow:0 1px 4px #0007; }
+.net-marker.selected { width:18px; height:18px; background:#f9b719; border-color:#171717; }
+.net-map em { position:absolute; inset:0; display:grid; place-items:center; color:#817866; font-size:11px; font-style:normal; }
+.net-report-title { margin:18px 0 9px; font-size:13px; }
+
+.guide-card { margin-top:14px; border:1px solid #eadfca; border-radius:18px; background:#fff; padding:17px; }
+.guide-card h3 { margin:0 0 10px; font-size:16px; }
+.guide-card p { color:#625d53; font-size:13px; line-height:1.5; }
+.guide-card ol { margin:0; padding-left:20px; color:#4f4a42; font-size:13px; line-height:1.55; }
+.guide-card li+li { margin-top:7px; }
+.backup-actions { display:grid; grid-template-columns:1fr 1fr; gap:9px; margin-top:14px; }
+.backup-actions .primary,.secondary-action { width:100%; border-radius:13px; padding:13px; font-weight:600; }
+.secondary-action { border:1px solid #d7b564; background:#fff7df; color:#8d1b1f; }
+.hidden-file { display:none; }
+.backup-note { margin-bottom:0; font-size:11px!important; }
+.backup-message { border-radius:10px; background:#fff7df; padding:10px; color:#171717!important; font-weight:600; }
 .period-filter-label { margin-top:14px; }
 .report-periods { grid-template-columns:repeat(5,1fr); margin-top:6px; }
 .report-periods button { padding:9px 4px; }
